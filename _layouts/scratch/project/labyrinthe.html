@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projet | Labyrinthe</title>
+    {% include scratch/head.html %}
+</head>
+
+
+<body>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+
+
+        <p class="text-muted lead hideIfNotAdmin">Vous êtes sur la page des projets comme administrateur</p>
+
+
+        <h1> Labyrinthe </h1>
+        <p class="text-muted">Jeu de labyrinthe simple mais amusant à faire et étendre</p>
+
+        <h2 id="resume">Résumé</h2>
+        <p></p><p>Guidez la courageuse petite souris dans ce labyrinthe vers son cheesy préféré !<br>Utilisez les flèches du clavier pour la déplacer et l'aider à atteindre son trésor tant convoité.</p><p></p>
+
+
+        <h2>Démo</h2>
+
+
+
+        <div class="card">
+            <div class="card-header" data-toggle="collapse" data-target="#demoProjectCollapsable">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Démo
+                    </button>
+                </h5>
+            </div>
+            <div id="demoProjectCollapsable" class="collapse">
+                <div class="card-body">
+
+                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-aMazeIng" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="projects/aMazeIng" data-editmode="False"></div>
+
+                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>Réalisation</h2>
+
+        <h4>Identification des objectifs du jeu</h4>
+        <p>On va se poser la question de <b>qu'est ce qu'on veut ?</b></p>
+        <p>( déjà répondu dans le <a href="#resume">résumé</a> )</p>
+
+        <h4>Identification des lutins</h4>
+        <p>On va se poser la question <b>de quoi avons nous besoin et que doit-il faire?</b></p>
+        Dans notre cas j'ai choisi d'en utiliser 3 :
+        <ul>
+
+            <li>Souris</li>
+
+            <li>Murs</li>
+
+            <li>Fromage</li>
+
+        </ul>
+
+        <h4>Programmation des lutins </h4>
+
+        <h5>Souris</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Au choix, on peut faire à la souris ou au clavier.<br>Au clavier c'est généralement plus simple (surtout pour les collisions), du coup je choisirai cette option dans ce projet</p> <p></p>
+
+        <h6> Collisions avec les murs </h6>
+        <p> </p><p>On veut éviter que notre lutin ne traverse les murs.<br>Il y à plusieurs façons de gérer ça, une des plus simples et de faire reculer le lutin après avoir avancé s'il est dans un mur.</p> <p></p>
+
+        <h6> Mange le fromage </h6>
+        <p> </p><p>Notre but est ici de dire un message une fois le fromage atteint.<br>Vu qu'on est la souris, on ne peut pas gérer la disparition du fromage après l'avoir mangé, du coup on se contentera juste d'afficher un message.<br>Pour cela il faudra vérifier en permanence (ou après un déplacement) si on touche ou non le fromage et afficher le message si c'est le cas</p> <p></p>
+
+        <h6> Initialisation </h6>
+        <p> </p><p>Un éventuel code d'initialisation :<br> - Commencer à un endroit en particulier ?<br> - Commencer avec un certain angle ?<br> - Dire un message ?</p> <p></p>
+
+
+        <h5>Murs</h5>
+
+        <h6> Collision avec le joueur </h6>
+        <p> </p><p>C'est au joueur de gérer ce qu'il se passe quand il touche le mur et non au mur.<br>Rien de particulier à faire ici, à moins qu'on veuille que le mur fasse quelque chose de particulier quand le joueur le touche.</p> <p></p>
+
+
+        <h5>Fromage</h5>
+
+        <h6> Faire disparaître le fromage </h6>
+        <p> </p><p>Cacher le fromage quand le lutin de la souris le touche</p> <p></p>
+
+
+
+
+
+        <script>
+            function JSeditorReady() {
+                var scratchLoadTarget = jQuery(this).find("embed");
+                console.log("CALL to JSeditorReady, with target : ");
+                console.log(scratchLoadTarget);
+
+                if (scratchLoadTarget != null) {
+                    for (var i=0; i<scratchLoadTarget.length; i++) {
+                        // Load l'URL
+                        loadFile(scratchLoadTarget[i]);
+                        // Load le mode éditeur ou jeu
+                        loadEdition(scratchLoadTarget[i]);
+                    }
+                } else {
+                    console.warn("Appel de JSeditorReady sans cible");
+                }
+
+                return true;
+            }
+
+        </script>
+
+
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+{% include scratch/endJS.html %}
+
+</body>
+
+</html>

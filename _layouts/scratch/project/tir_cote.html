@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projet | Tir Coté</title>
+    {% include scratch/head.html %}
+</head>
+
+
+<body>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+
+
+        <p class="text-muted lead hideIfNotAdmin">Vous êtes sur la page des projets comme administrateur</p>
+
+
+        <h1> Tir coté </h1>
+        <p class="text-muted">Jeu de tir sur le coté</p>
+
+        <h2 id="resume">Résumé</h2>
+        <p></p><p>Vous devez tirer sur le dinosaure avec votre œuf autant que possible ! Mais le dinosaure reviendra inlassablement.<br>Votre œuf reviendra automatiquement entre vos mains après avoir touché le dinosaure ou un bord</p><p></p>
+
+
+        <h2>Démo</h2>
+
+
+
+        <div class="card">
+            <div class="card-header" data-toggle="collapse" data-target="#demoProjectCollapsable">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Démo
+                    </button>
+                </h5>
+            </div>
+            <div id="demoProjectCollapsable" class="collapse">
+                <div class="card-body">
+
+                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-DinoHunter" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="projects/DinoHunter" data-editmode="False"></div>
+
+                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>Réalisation</h2>
+
+        <h4>Identification des objectifs du jeu</h4>
+        <p>On va se poser la question de <b>qu'est ce qu'on veut ?</b></p>
+        <p>( déjà répondu dans le <a href="#resume">résumé</a> )</p>
+
+        <h4>Identification des lutins</h4>
+        <p>On va se poser la question <b>de quoi avons nous besoin et que doit-il faire?</b></p>
+        Dans notre cas j'ai choisi d'en utiliser 3 :
+        <ul>
+
+            <li>Chat</li>
+
+            <li>Oeuf</li>
+
+            <li>Dinosaure</li>
+
+        </ul>
+
+        <h4>Programmation des lutins </h4>
+
+        <h5>Chat</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Rien à faire pour le chat dans mon cas.<br>Mais libre à toi de le déplacer si tu le souhaite dans ton jeu ! Fais juste attention du coup à bien faire revenir l’œuf au bon endroit dans sa main ;)</p> <p></p>
+
+
+        <h5>Oeuf</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Avance vers la souris jusqu'à ce qu'un bord soit atteint ou que le dinosaure est touché. Dans les 2 cas il se téléporte dans la main du chat à la fin</p> <p></p>
+
+
+        <h5>Dinosaure</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Avance vers la gauche, se téléporte à droite avec une hauteur aléatoire s'il est trop à gauche</p> <p></p>
+
+        <h6> Toucher par l'oeuf </h6>
+        <p> </p><p>Affiche un petit message puis retourne à droite aléatoirement</p> <p></p>
+
+
+
+
+
+        <script>
+            function JSeditorReady() {
+                var scratchLoadTarget = jQuery(this).find("embed");
+                console.log("CALL to JSeditorReady, with target : ");
+                console.log(scratchLoadTarget);
+
+                if (scratchLoadTarget != null) {
+                    for (var i=0; i<scratchLoadTarget.length; i++) {
+                        // Load l'URL
+                        loadFile(scratchLoadTarget[i]);
+                        // Load le mode éditeur ou jeu
+                        loadEdition(scratchLoadTarget[i]);
+                    }
+                } else {
+                    console.warn("Appel de JSeditorReady sans cible");
+                }
+
+                return true;
+            }
+
+        </script>
+
+
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+{% include scratch/endJS.html %}
+
+</body>
+
+</html>

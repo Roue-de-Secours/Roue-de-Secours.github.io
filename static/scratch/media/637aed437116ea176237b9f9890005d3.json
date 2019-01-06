@@ -1,0 +1,30 @@
+{
+	"objName": "Paddle",
+	"sounds": [{
+			"soundName": "boing",
+			"soundID": -1,
+			"md5": "53a3c2e27d1fb5fdb14aaf0cb41e7889.wav",
+			"sampleCount": 6804,
+			"rate": 22050,
+			"format": "adpcm"
+		}],
+	"costumes": [{
+			"costumeName": "paddle",
+			"baseLayerID": -1,
+			"baseLayerMD5": "8038149bdfe24733ea2144d37d297815.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 44,
+			"rotationCenterY": 7
+		}],
+	"currentCostumeIndex": 0,
+	"scratchX": 0,
+	"scratchY": 0,
+	"scale": 0.85000000000001,
+	"direction": -90,
+	"rotationStyle": "none",
+	"isDraggable": false,
+	"indexInLibrary": 100000,
+	"visible": true,
+	"spriteInfo": {
+	}
+}

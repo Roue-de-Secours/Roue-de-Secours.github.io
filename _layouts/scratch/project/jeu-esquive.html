@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projet | Jeu d'esquive</title>
+    {% include scratch/head.html %}
+</head>
+
+
+<body>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+
+
+        <p class="text-muted lead hideIfNotAdmin">Vous êtes sur la page des projets comme administrateur</p>
+
+
+        <h1> Jeu d'esquive </h1>
+        <p class="text-muted">Jeu d'esquive, éviter aussi longtemps que possible les blocs arrivant de la droite</p>
+
+        <h2 id="resume">Résumé</h2>
+        <p></p><p>Déplacer la coccinelle de manière qu'elle esquive les 2 blocs qui avance dans sa direction. Survivez aussi longtemps que possible !</p><p></p>
+
+
+        <h2>Démo</h2>
+
+
+
+        <div class="card">
+            <div class="card-header" data-toggle="collapse" data-target="#demoProjectCollapsable">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Démo
+                    </button>
+                </h5>
+            </div>
+            <div id="demoProjectCollapsable" class="collapse">
+                <div class="card-body">
+
+                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-Coci-esquive" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="projects/Coci-esquive" data-editmode="False"></div>
+
+                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>Réalisation</h2>
+
+        <h4>Identification des objectifs du jeu</h4>
+        <p>On va se poser la question de <b>qu'est ce qu'on veut ?</b></p>
+        <p>( déjà répondu dans le <a href="#resume">résumé</a> )</p>
+
+        <h4>Identification des lutins</h4>
+        <p>On va se poser la question <b>de quoi avons nous besoin et que doit-il faire?</b></p>
+        Dans notre cas j'ai choisi d'en utiliser 2 :
+        <ul>
+
+            <li>Coccinelle</li>
+
+            <li>Blocs (2)</li>
+
+        </ul>
+
+        <h4>Programmation des lutins </h4>
+
+        <h5>Coccinelle</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Se déplace uniquement verticalement, j'ai fait en sorte qu'elle warp dans l'autre direction si elle est déjà à une extrémité</p> <p></p>
+
+        <h6> Collisions avec les blocs </h6>
+        <p> </p><p>Vérifie en permanence si elle touche un des 2 blocs, si c'est le cas je jeu s'interrompt ("stop tout")</p> <p></p>
+
+
+        <h5>Blocs (2)</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Les mouvements dépendent des blocs :<br> - Le rouge va à droite et prends une hauteur aléatoire au début et quand il touche le bord gauche<br> - Le bleu se déplace en diagonale et warp quand il est en bas</p> <p></p>
+
+
+
+
+
+        <script>
+            function JSeditorReady() {
+                var scratchLoadTarget = jQuery(this).find("embed");
+                console.log("CALL to JSeditorReady, with target : ");
+                console.log(scratchLoadTarget);
+
+                if (scratchLoadTarget != null) {
+                    for (var i=0; i<scratchLoadTarget.length; i++) {
+                        // Load l'URL
+                        loadFile(scratchLoadTarget[i]);
+                        // Load le mode éditeur ou jeu
+                        loadEdition(scratchLoadTarget[i]);
+                    }
+                } else {
+                    console.warn("Appel de JSeditorReady sans cible");
+                }
+
+                return true;
+            }
+
+        </script>
+
+
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+{% include scratch/endJS.html %}
+
+</body>
+
+</html>

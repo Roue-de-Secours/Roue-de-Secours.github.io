@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projet | Plate-forme</title>
+    {% include scratch/head.html %}
+</head>
+
+
+<body>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+
+
+        <p class="text-muted lead hideIfNotAdmin">Vous êtes sur la page des projets comme administrateur</p>
+
+
+        <h1> Plate-forme </h1>
+        <p class="text-muted">Jeu de plate-forme simplifié.
+            Attention qu'il reste difficile à programmer !</p>
+
+        <h2 id="resume">Résumé</h2>
+        <p></p><p>Le bloc mauve doit atteindre le drapeau d'arrivée en bravant les nombreux obstacles sur son parcours.<br>Ce projet est assez difficile à réaliser, je te conseille de regarder les slides qui y sont associés ;)</p><p></p>
+
+
+        <h2>Démo</h2>
+
+
+
+        <div class="card">
+            <div class="card-header" data-toggle="collapse" data-target="#demoProjectCollapsable">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Démo
+                    </button>
+                </h5>
+            </div>
+            <div id="demoProjectCollapsable" class="collapse">
+                <div class="card-body">
+
+                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-plate-forme" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="projects/plate-forme" data-editmode="False"></div>
+
+                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>Réalisation</h2>
+
+        <h4>Identification des objectifs du jeu</h4>
+        <p>On va se poser la question de <b>qu'est ce qu'on veut ?</b></p>
+        <p>( déjà répondu dans le <a href="#resume">résumé</a> )</p>
+
+        <h4>Identification des lutins</h4>
+        <p>On va se poser la question <b>de quoi avons nous besoin et que doit-il faire?</b></p>
+        Dans notre cas j'ai choisi d'en utiliser 3 :
+        <ul>
+
+            <li>Joueur</li>
+
+            <li>Obstacles</li>
+
+            <li>Drapeau d'arrivée</li>
+
+        </ul>
+
+        <h4>Programmation des lutins </h4>
+
+        <h5>Joueur</h5>
+
+        <h6> Déplacements horizontaux </h6>
+        <p> </p><p>Assez classique, il ne traverse simplement pas les obstacles.<br>J'ai fait en sorte qu'il se retire de manière un peu plus fluide (pour qu'il colle bien le mur), mais l'idée est la même</p> <p></p>
+
+        <h6> Sauter </h6>
+        <p> </p><p>Cette partie est la plus compliqué, je te conseille de regarder les slides si tu veux réussir, ça utilise le concept de variables.<br>L'idée c'est qu'on accepte qu'il saute uniquement quand il à un obstacle en dessous de lui, on lui donne d'un coup une forte impulsion verticale si on appuie sur la flèche du haut</p> <p></p>
+
+        <h6> Gravité </h6>
+        <p> </p><p>Suffit de descendre le lutin progressivement jusqu'à qu'il est un obstacle sous ses pieds.<br>Attention qu'ici on manipule une variable pour le faire descendre progressivement.</p> <p></p>
+
+        <h6> Drapeau d'arrivée touché </h6>
+        <p> </p><p>Affiche un petit message quand le drapeau d'arrivée est atteint</p> <p></p>
+
+
+        <h5>Obstacles</h5>
+
+        <h6> Collision </h6>
+        <p> </p><p>Rien à faire de particulier car le joueur s'occupe de vérifier</p> <p></p>
+
+
+        <h5>Drapeau d'arrivée</h5>
+
+        <h6> Collision joueur </h6>
+        <p> </p><p>Rien de particulier car le joueur s'en occupe déjà</p> <p></p>
+
+
+
+
+
+        <script>
+            function JSeditorReady() {
+                var scratchLoadTarget = jQuery(this).find("embed");
+                console.log("CALL to JSeditorReady, with target : ");
+                console.log(scratchLoadTarget);
+
+                if (scratchLoadTarget != null) {
+                    for (var i=0; i<scratchLoadTarget.length; i++) {
+                        // Load l'URL
+                        loadFile(scratchLoadTarget[i]);
+                        // Load le mode éditeur ou jeu
+                        loadEdition(scratchLoadTarget[i]);
+                    }
+                } else {
+                    console.warn("Appel de JSeditorReady sans cible");
+                }
+
+                return true;
+            }
+
+        </script>
+
+
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+{% include scratch/endJS.html %}
+
+</body>
+
+</html>

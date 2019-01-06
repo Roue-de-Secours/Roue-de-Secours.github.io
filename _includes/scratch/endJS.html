@@ -1,0 +1,71 @@
+<script>
+    var scratchLoadTarget = null; // target that must load it's scratch content
+
+    // Refresh la cible avec l'événement d'afichage
+    $(".collapse").on('show.bs.collapse', function () {
+        console.log("EVENT");
+        scratchLoadTarget = jQuery(this).find("embed"); // utiliser .find ??
+    });
+
+    // Toggle in edition mode for a given scratch project
+    // Only in admin mode
+    function toggleEdition(scratchOfflineProject) {
+        console.log("Toggle edition for :");
+        console.log(scratchOfflineProject);
+        if (scratchOfflineProject.getAttribute("data-editmode") === "True") {
+            scratchOfflineProject.setAttribute("data-editmode", "False");
+        }
+        else {
+            scratchOfflineProject.setAttribute("data-editmode", "True");
+        }
+        loadEdition(scratchOfflineProject);
+    }
+
+    // Set Edition mode base on data-editmode information
+    function loadEdition(scratchOfflineProject) {
+        if (scratchOfflineProject.getAttribute("data-editmode") === "True") {
+            scratchOfflineProject.ASsetEditMode(true);
+        }
+        else {
+            scratchOfflineProject.ASsetEditMode(false);
+        }
+    }
+
+    // Set loading file based on data-sbfile information
+    function loadFile(scratchOfflineProject) {
+        var url = "/static/scratch/files/"+scratchOfflineProject.getAttribute("data-sbfile")+".sb2";
+        console.log("URL : " + url);
+        scratchOfflineProject.ASloadProjectUrl(url);
+    }
+
+    // Appelé automatiquement par le swf de scratch au démarrage
+    function JSeditorReady() {
+        console.log("CALL to JSeditorReady, with target : ");
+        console.log(scratchLoadTarget);
+
+        if (scratchLoadTarget != null) {
+            for (var i=0; i<scratchLoadTarget.length; i++) {
+                // Load l'URL
+                loadFile(scratchLoadTarget[i]);
+                // Load le mode éditeur ou jeu
+                loadEdition(scratchLoadTarget[i]);
+            }
+        } else {
+            console.warn("Appel de JSeditorReady sans cible");
+        }
+
+        return true;
+    }
+
+</script>
+<script>
+    // Hide content if url does not contains "corr"
+    $(document).ready(function () {
+        if(window.location.href.indexOf("corr") == -1) {
+            let allStudentHiddenContent = document.getElementsByClassName("hideIfNotAdmin");
+            for (let i = 0; i < allStudentHiddenContent.length; i++) {
+                allStudentHiddenContent[i].style.display = "none";
+            }
+        }
+    });
+</script>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projet | Pong</title>
+    {% include scratch/head.html %}
+</head>
+
+
+<body>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+
+
+        <p class="text-muted lead hideIfNotAdmin">Vous êtes sur la page des projets comme administrateur</p>
+
+
+        <h1> Pong </h1>
+        <p class="text-muted">Jeu de pong en solo très simplifié</p>
+
+        <h2 id="resume">Résumé</h2>
+        <p></p><p>Renvoyer la balle autant que possible sans toucher le bord bas</p><p></p>
+
+
+        <h2>Démo</h2>
+
+
+
+        <div class="card">
+            <div class="card-header" data-toggle="collapse" data-target="#demoProjectCollapsable">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Démo
+                    </button>
+                </h5>
+            </div>
+            <div id="demoProjectCollapsable" class="collapse">
+                <div class="card-body">
+
+                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-Pong" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="projects/Pong" data-editmode="False"></div>
+
+                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>Réalisation</h2>
+
+        <h4>Identification des objectifs du jeu</h4>
+        <p>On va se poser la question de <b>qu'est ce qu'on veut ?</b></p>
+        <p>( déjà répondu dans le <a href="#resume">résumé</a> )</p>
+
+        <h4>Identification des lutins</h4>
+        <p>On va se poser la question <b>de quoi avons nous besoin et que doit-il faire?</b></p>
+        Dans notre cas j'ai choisi d'en utiliser 3 :
+        <ul>
+
+            <li>Raquette</li>
+
+            <li>Balle</li>
+
+            <li>Zone KO</li>
+
+        </ul>
+
+        <h4>Programmation des lutins </h4>
+
+        <h5>Raquette</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>La raquette à seulement à gérer son déplacement, on peut le faire très simplement avec les 2 touches de clavier, ici j'ai préféré que la raquette suive seulement horizontalement le pointeur de la souris</p> <p></p>
+
+
+        <h5>Balle</h5>
+
+        <h6> Déplacement </h6>
+        <p> </p><p>Ici je lui donne une orientation aléatoire au début puis je le fait avancer indéfiniment (et rebondir quand un bord est atteint)</p> <p></p>
+
+        <h6> Collision avec la raquette </h6>
+        <p> </p><p>Je me contente de lui faire faire un demi tour lorsqu'il touche la raquette</p> <p></p>
+
+        <h6> Collisions avec la zone KO </h6>
+        <p> </p><p>Je le téléporte au milieu de la salle en donnant une nouvelle orientation aléatoire</p> <p></p>
+
+
+        <h5>Zone KO</h5>
+
+        <h6> Collision avec la balle </h6>
+        <p> </p><p>Rien de particulier à faire, vu qu'il à pas à faire d'action particulière quand la balle le touche</p> <p></p>
+
+
+
+
+
+        <script>
+            function JSeditorReady() {
+                var scratchLoadTarget = jQuery(this).find("embed");
+                console.log("CALL to JSeditorReady, with target : ");
+                console.log(scratchLoadTarget);
+
+                if (scratchLoadTarget != null) {
+                    for (var i=0; i<scratchLoadTarget.length; i++) {
+                        // Load l'URL
+                        loadFile(scratchLoadTarget[i]);
+                        // Load le mode éditeur ou jeu
+                        loadEdition(scratchLoadTarget[i]);
+                    }
+                } else {
+                    console.warn("Appel de JSeditorReady sans cible");
+                }
+
+                return true;
+            }
+
+        </script>
+
+
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+{% include scratch/endJS.html %}
+
+</body>
+
+</html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concept | Avancer</title>
+    {% include scratch/head.html %}
+</head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+        <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="0" height="0"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g></g></svg></div></pre> <!-- Je sais pas pourquoi, mais les blocs ne se montre pas bien sans ça -->
+
+
+        <p class="text-muted lead hideIfNotAdmin">Vous êtes sur la page des concept comme administrateur, tu pourra voir les solutions aux exercices et accéder aux codes sources des projets Scratch</p>
+
+        <h1 class="mt-5"> <img class="header-icn" src="/static/img/icons/concept/move.png"> Avancer </h1>
+
+        <h4><p>Orienter le lutin ne suffit pas à créer un mouvement. Pour cela, après l'avoir correctement orienté il faut lui demander d'<b>avancer</b></p></h4>
+
+
+
+        <div class="card">
+            <div class="card-header" data-toggle="collapse" data-target="#BlocsCollapsable">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Blocs
+                    </button>
+                </h5>
+            </div>
+            <div id="BlocsCollapsable" class="collapse">
+                <div class="card-body">
+                    <p>    </p><table class="table table-bordered">        <thead>        <tr>            <th scope="col">Bloc</th>            <th scope="col">Description</th>            <th scope="col">Doc</th>        </tr>        </thead>        <tbody>         <tr>        <td><code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="96" height="25"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 89 0 L 92 3 L 92 19 L 89 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 7.5 0 A 6.5 6.5 0 0 1 7.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)"></text></g></g></g></g></svg></span></code></td>        <td>Avance le lutin dans sa direction courante</td>        <td align="center">            <a href="https://fr.scratch-wiki.info/wiki/avancer_de_()_(bloc)" target="_blank">              [LIEN]🔗            </a>        </td>    </tr>            </tbody>    </table>    <p></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <h3> Exemples </h3>
+        <div class="accordion" id="accordionExamples">
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExample1">
+                    <h6 class="mb-0">
+                        <button class="btn btn-link" type="button">
+                            Exemple 1 : Avancer de 10 à 90°
+                        </button>
+                    </h6>
+                </div>
+                <div id="collapseExample1" class="collapse" data-parent="#accordionExamples">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+
+
+
+                                <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exemple-avancer1" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="examples/avancer/exemple-avancer1" data-editmode="False"></div>
+
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="112" height="47"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 105 0 L 108 3 L 108 19 L 105 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 20.5 0 A 6.5 6.5 0 0 1 20.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">90</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(17 4)"></polygon></g></g><g transform="translate(2 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 95 0 L 98 3 L 98 19 L 95 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 13.5 0 A 6.5 6.5 0 0 1 13.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">10</text></g></g></g></g></svg></div></pre>
+
+                                <p>Le chat est déjà tourné vers la droite, donc il se contente d'avancer devant lui de 10 unités</p>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" href="https://scratch.mit.edu/projects/237895530/#editor" target="_blank" role="button">Consulter en ligne</a>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" onclick="loadFile($(this).parent().parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExample2">
+                    <h6 class="mb-0">
+                        <button class="btn btn-link" type="button">
+                            Exemple 2 : Avancer de 10 à -90°
+                        </button>
+                    </h6>
+                </div>
+                <div id="collapseExample2" class="collapse" data-parent="#accordionExamples">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+
+
+
+                                <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exemple-avancer2" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="examples/avancer/exemple-avancer2" data-editmode="False"></div>
+
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="117" height="47"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 110 0 L 113 3 L 113 19 L 110 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 25.5 0 A 6.5 6.5 0 0 1 25.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">-90</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(22 4)"></polygon></g></g><g transform="translate(2 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 95 0 L 98 3 L 98 19 L 95 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 13.5 0 A 6.5 6.5 0 0 1 13.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">10</text></g></g></g></g></svg></div></pre>
+
+                                <p>Cette fois, avant de se déplacer le chat se retourne d'abord. Du coup en avançant il se retrouve derrière sa position initiale</p>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" href="https://scratch.mit.edu/projects/237895538/#editor" target="_blank" role="button">Consulter en ligne</a>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" onclick="loadFile($(this).parent().parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExample3">
+                    <h6 class="mb-0">
+                        <button class="btn btn-link" type="button">
+                            Exemple 3 : Avancer de -10 à 90°
+                        </button>
+                    </h6>
+                </div>
+                <div id="collapseExample3" class="collapse" data-parent="#accordionExamples">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+
+
+
+                                <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exemple-avancer3" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="examples/avancer/exemple-avancer3" data-editmode="False"></div>
+
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="112" height="47"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 105 0 L 108 3 L 108 19 L 105 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 20.5 0 A 6.5 6.5 0 0 1 20.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">90</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(17 4)"></polygon></g></g><g transform="translate(2 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 100 0 L 103 3 L 103 19 L 100 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 18.5 0 A 6.5 6.5 0 0 1 18.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">-10</text></g></g></g></g></svg></div></pre>
+
+                                <p>Cet exemple est légèrement différent de l'autre car il ne se retourne pas. Par contre il avance d'une valeur négative, du coup il recule.<br>Contrairement à l’exemple précédent l'image du chat ne se retourne pas ici</p>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" href="https://scratch.mit.edu/projects/237895588/#editor" target="_blank" role="button">Consulter en ligne</a>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" onclick="loadFile($(this).parent().parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExample4">
+                    <h6 class="mb-0">
+                        <button class="btn btn-link" type="button">
+                            Exemple 4 : Avancer successivement
+                        </button>
+                    </h6>
+                </div>
+                <div id="collapseExample4" class="collapse" data-parent="#accordionExamples">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+
+
+
+                                <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exemple-avancer4" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="examples/avancer/exemple-avancer4" data-editmode="False"></div>
+
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="176" height="106"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 105 0 L 108 3 L 108 19 L 105 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 20.5 0 A 6.5 6.5 0 0 1 20.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">90</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(17 4)"></polygon></g></g><g transform="translate(2 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 98 0 L 101 3 L 101 18 L 98 21 L 42 21 L 39 24 L 31 24 L 28 21 L 17 21 L 15 23 L 15 63 L 17 65 L 98 65 L 101 68 L 101 78 L 98 81 L 27 81 L 24 84 L 16 84 L 13 81 L 3 81 L 0 78" class="sb-control sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 4)">répéter</text><g transform="translate(51 3)"><path d="M 6.5 0 L 13.5 0 A 6.5 6.5 0 0 1 13.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">24</text></g><text x="0" y="10" class="sb-label " transform="translate(75 4)">fois</text><use xlink:href="#loopArrow" transform="translate(86 78)"></use><g transform="translate(15 21)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 154 0 L 157 3 L 157 19 L 154 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">tourner</text><use xlink:href="#turnLeft" transform="translate(52 6)"></use><text x="0" y="10" class="sb-label " transform="translate(71 5)">de</text><g transform="translate(89 4)"><path d="M 6.5 0 L 13.5 0 A 6.5 6.5 0 0 1 13.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">15</text></g><text x="0" y="10" class="sb-label " transform="translate(113 5)">degrés</text></g><g transform="translate(0 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 95 0 L 98 3 L 98 19 L 95 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 13.5 0 A 6.5 6.5 0 0 1 13.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">24</text></g></g></g></g></g></g></svg></div></pre>
+
+                                <p>Dans l'exemple de l'orientation on se contentait de le faire tourner sur lui-même, ici en le déplaçant en plus on dessine un cercle.</p>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" href="https://scratch.mit.edu/projects/237895634/#editor" target="_blank" role="button">Consulter en ligne</a>
+
+
+                                <a class="btn btn-info hideIfNotAdmin" onclick="loadFile($(this).parent().parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <h3>Défis</h3>
+        <div class="accordion" id="accordionExercises">
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExercise1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>
+                                <button class="btn btn-link" type="button">
+                                    Défi 1 : Avancer vers le bas
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right"> <h4>
+
+                                <p class="text-success" style="display:inline">⚑</p>
+
+
+                            </h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseExercise1" class="collapse" data-parent="#accordionExercises">
+                    <div class="card-body">
+                        <p>Orienter le chat vers le bas puis le faire avancer de 5.</p>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#DemoEx1Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Démo
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="DemoEx1Collapsable" class="collapse">
+                                <div class="card-body">
+
+                                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exercice-avancer1" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="exercices/avancer/exercice-avancer1" data-editmode="False"></div>
+
+                                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint1ex1Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 1
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint1ex1Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Lors d'un exercice précédent on avait déjà orienter le lutin vers le bas.<br>Ici il faut refaire cette manipulation et <b>après</b> le faire avancer</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="hideIfNotAdmin">
+
+
+                            <div class="card">
+                                <div class="card-header" data-toggle="collapse" data-target="#SolutionCollapsable">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button">
+                                            Solution
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="SolutionCollapsable" class="collapse">
+                                    <div class="card-body">
+
+                                        <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="118" height="47"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 111 0 L 114 3 L 114 19 L 111 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 26.5 0 A 6.5 6.5 0 0 1 26.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">180</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(23 4)"></polygon></g></g><g transform="translate(2 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 90 0 L 93 3 L 93 19 L 90 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 8.5 0 A 6.5 6.5 0 0 1 8.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g></g></g></g></svg></div></pre>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExercise2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>
+                                <button class="btn btn-link" type="button">
+                                    Défi 2 : Avancer vers le bas en appuyant sur le clavier
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right"> <h4>
+
+                                <p class="text-success" style="display:inline">⚑</p>
+
+
+                            </h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseExercise2" class="collapse" data-parent="#accordionExercises">
+                    <div class="card-body">
+                        <p>Pareil que l'exercice précédent, mais il faut que l'action s'effectue quand on appuie sur la touche du clavier <i>flèche bas</i>.<br>Donc ça ne sera plus nécessaire de double-cliquer sur les blocs ! Il suffira d'appuyer la touche du clavier</p>
+
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">Les blocs suivants te seront utiles pour résoudre cet exercice :</p>
+                                <div id="collapseBlock" class="card">
+                                    <div class="card-body">
+                                        <table class="table table-bordered">        <thead>        <tr>            <th scope="col">Bloc</th>            <th scope="col">Description</th>            <th scope="col">Doc</th>        </tr>        </thead>        <tbody>         <tr>        <td><code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="141" height="36"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 134 10 L 137 13 L 137 30 L 134 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="24" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="24" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)"></text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(14 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(73 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(94 16)">pressé</text></g></g></g></svg></span></code></td>        <td>Tant que la touche du clavier indiquée est pressée</td>        <td align="center">            <a href="https://fr.scratch-wiki.info/wiki/quand_(_v)_est_pressé_(bloc)" target="_blank">              [LIEN]🔗            </a>        </td>    </tr>            </tbody>    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#DemoEx2Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Démo
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="DemoEx2Collapsable" class="collapse">
+                                <div class="card-body">
+
+                                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exercice-avancer2" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="exercices/avancer/exercice-avancer2" data-editmode="False"></div>
+
+                                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint1ex2Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 1
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint1ex2Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Il suffit de prendre les blocs de l'exercice précédent et de les glisser en dessous d'un bloc <code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="182" height="36"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 175 10 L 178 13 L 178 30 L 175 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="65" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="65" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">flèche bas</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(55 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(114 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(135 16)">pressé</text></g></g></g></svg></span></code></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="hideIfNotAdmin">
+
+
+                            <div class="card">
+                                <div class="card-header" data-toggle="collapse" data-target="#SolutionCollapsable">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button">
+                                            Solution
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="SolutionCollapsable" class="collapse">
+                                    <div class="card-body">
+
+                                        <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="186" height="170"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 175 10 L 178 13 L 178 30 L 175 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="65" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="65" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">flèche bas</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(55 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(114 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(135 16)">pressé</text></g><g transform="translate(2 33)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 111 0 L 114 3 L 114 19 L 111 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 26.5 0 A 6.5 6.5 0 0 1 26.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">180</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(23 4)"></polygon></g></g><g transform="translate(2 55)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 90 0 L 93 3 L 93 19 L 90 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 8.5 0 A 6.5 6.5 0 0 1 8.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g></g></g><g transform="translate(0 90)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 179 10 L 182 13 L 182 30 L 179 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="69" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="69" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">flèche haut</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(59 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(118 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(139 16)">pressé</text></g><g transform="translate(2 33)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 102 0 L 105 3 L 105 19 L 102 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">à</text><g transform="translate(75 4)"><path d="M 6.5 0 L 17.5 0 A 6.5 6.5 0 0 1 17.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number-dropdown"></path><text x="0" y="10" class="sb-label sb-literal-number-dropdown" transform="translate(5 0)">0</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(14 4)"></polygon></g></g><g transform="translate(2 55)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 90 0 L 93 3 L 93 19 L 90 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 8.5 0 A 6.5 6.5 0 0 1 8.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g></g></g></g></svg></div></pre>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExercise3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>
+                                <button class="btn btn-link" type="button">
+                                    Défi 3 : Avancer vers le haut et vers le bas
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right"> <h4>
+
+                                <p class="text-success" style="display:inline">⚑</p>
+
+
+                                <p class="text-warning" style="display:inline">★</p>
+
+                            </h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseExercise3" class="collapse" data-parent="#accordionExercises">
+                    <div class="card-body">
+                        <p>Il faut maintenant qu'en plus de pouvoir aller vers le bas en appuyant bas, pouvoir aller vers le haut en appuyant la touche <i>flèche haut</i></p>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#DemoEx3Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Démo
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="DemoEx3Collapsable" class="collapse">
+                                <div class="card-body">
+
+                                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exercice-avancer3" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="exercices/avancer/exercice-avancer3" data-editmode="False"></div>
+
+                                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint1ex3Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 1
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint1ex3Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Finalement tout ce qui différencie les 2 comportements, c'est l'orientation à donner en fonction de la touche pressée (vers le bas pour bas, et vers le haut pour celle du haut)</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint2ex3Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 2
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint2ex3Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Attention qu'ici il nous faut 2 comportement bien distincts. Aller en haut pour la flèche haut, et aller en bas pour la flèche du bas.<br>Du coup il nous faudra 2 blocs <code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="141" height="36"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 134 10 L 137 13 L 137 30 L 134 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="24" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="24" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)"></text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(14 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(73 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(94 16)">pressé</text></g></g></g></svg></span></code> un pour chaque touche du clavier correspondant.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExercise4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>
+                                <button class="btn btn-link" type="button">
+                                    Défi 4 : Avancer vers la souris
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right"> <h4>
+
+                                <p class="text-success" style="display:inline">⚑</p>
+
+
+                            </h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseExercise4" class="collapse" data-parent="#accordionExercises">
+                    <div class="card-body">
+                        <p>Quand le joueur appuie sur la touche <i>espace</i>, orienter le chat vers le pointeur de la souris et le faire avancer de 8</p>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#DemoEx4Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Démo
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="DemoEx4Collapsable" class="collapse">
+                                <div class="card-body">
+
+                                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exercice-avancer4" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="exercices/avancer/exercice-avancer4" data-editmode="False"></div>
+
+                                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint1ex4Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 1
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint1ex4Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Très ressemblant à l'exercice précédent, il suffit de remplacer la touche pressée ainsi que la façon d'orienter qui ne doit plus être à un angle particulier mais <i>vers le pointeur de la souris</i></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint2ex4Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 2
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint2ex4Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Lors d'un précédent exercice on avait orienté le char vers le pointeur de la souris, il suffit de le refaire ici et d'ensuite le faire avancer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint3ex4Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 3
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint3ex4Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Tu trouve toujours pas ??<br>Allez, ce bloc devrai t'aider à te mettre sur la voie ;)<br><code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="203" height="25"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 196 0 L 199 3 L 199 19 L 196 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">vers</text><g transform="translate(92 4)"><g width="101" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="101" height="14" class="sb-motion sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pointeur de souris</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(91 5)"></polygon></g></g></g></g></svg></span></code> et <code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="167" height="36"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 160 10 L 163 13 L 163 30 L 160 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="50" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="50" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">espace</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(40 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(99 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(120 16)">pressé</text></g></g></g></svg></span></code></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="hideIfNotAdmin">
+
+
+                            <div class="card">
+                                <div class="card-header" data-toggle="collapse" data-target="#SolutionCollapsable">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button">
+                                            Solution
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="SolutionCollapsable" class="collapse">
+                                    <div class="card-body">
+
+                                        <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="203" height="80"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 160 10 L 163 13 L 163 30 L 160 33 L 27 33 L 24 36 L 16 36 L 13 33 L 3 33 L 0 30 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 16)">quand</text><g transform="translate(45 15)"><g width="50" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="50" height="14" class="sb-events sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">espace</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(40 5)"></polygon></g><text x="0" y="10" class="sb-label " transform="translate(99 16)">est</text><text x="0" y="10" class="sb-label " transform="translate(120 16)">pressé</text></g><g transform="translate(2 33)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 196 0 L 199 3 L 199 19 L 196 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">vers</text><g transform="translate(92 4)"><g width="101" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="101" height="14" class="sb-motion sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pointeur de souris</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(91 5)"></polygon></g></g><g transform="translate(2 55)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 90 0 L 93 3 L 93 19 L 90 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 8.5 0 A 6.5 6.5 0 0 1 8.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">8</text></g></g></g></g></svg></div></pre>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#collapseExercise5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>
+                                <button class="btn btn-link" type="button">
+                                    Défi 5 : Tout le temps suivre la souris
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right"> <h4>
+
+                                <p class="text-success" style="display:inline">⚑</p>
+
+
+                                <p class="text-warning" style="display:inline">★</p>
+
+                            </h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseExercise5" class="collapse" data-parent="#accordionExercises">
+                    <div class="card-body">
+                        <p>Pareil que l'exercice précédent, mais suivre en permanence le pointeur de souris à partir du moment ou le jeu est lancé (drapeau vert cliqué) et non plus seulement quand <i>espace</i> est pressé</p>
+
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">Les blocs suivants te seront utiles pour résoudre cet exercice :</p>
+                                <div id="collapseBlock" class="card">
+                                    <div class="card-body">
+                                        <table class="table table-bordered">        <thead>        <tr>            <th scope="col">Bloc</th>            <th scope="col">Description</th>            <th scope="col">Doc</th>        </tr>        </thead>        <tbody>         <tr>        <td><code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="133" height="41"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 126 10 L 129 13 L 129 35 L 126 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 18)">quand</text><use xlink:href="#greenFlag" transform="translate(45 12)"></use><text x="0" y="10" class="sb-label " transform="translate(69 18)">est</text><text x="0" y="10" class="sb-label " transform="translate(90 18)">cliqué</text></g></g></g></svg></span></code></td>        <td>Quand le drapeau vert est cliqué.
+                                            Quand le jeu est lancé.
+                                            A partir du moment ou le jeu commence...</td>        <td align="center">            <a href="https://fr.scratch-wiki.info/wiki/quand_le_drapeau_vert_pressé_(bloc)" target="_blank">              [LIEN]🔗            </a>        </td>    </tr>        <tr>        <td><code class="blocksInline"><span class="scratchblocks scratchblocks-inline" style="display: inline-block; vertical-align: middle;"><svg version="1.1" width="132" height="50"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 125 0 L 128 3 L 128 19 L 125 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 32 L 17 34 L 125 34 L 128 37 L 128 47 L 125 50 L 3 50 L 0 47" class="sb-control sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">répéter</text><text x="0" y="10" class="sb-label " transform="translate(51 5)">indéfiniment</text><use xlink:href="#loopArrow" transform="translate(113 47)"></use><g transform="translate(15 22)"></g></g></g></g></svg></span></code></td>        <td>Répète indéfiniment un ensemble de blocs.
+                                            Pour toujours...
+                                            En permanence...
+                                            Tout le temps...</td>        <td align="center">            <a href="https://fr.scratch-wiki.info/wiki/répéter_indéfiniment_(bloc)" target="_blank">              [LIEN]🔗            </a>        </td>    </tr>            </tbody>    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#DemoEx5Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Démo
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="DemoEx5Collapsable" class="collapse">
+                                <div class="card-body">
+
+                                    <div class="embed-responsive embed-responsive-4by3"><embed id="scratch-flash-avancer-exercice-avancer5" class="embed-responsive embed-responsive-4by3" src="/static/scratch/Scratch.swf" data-sbfile="exercices/avancer/exercice-avancer5" data-editmode="False"></div>
+
+                                    <a class="btn btn-info hideIfNotAdmin" onclick="toggleEdition($(this).parent().find('embed')[0])" role="button">Toggle édition</a>
+
+                                    <a class="btn btn-info" onclick="loadFile($(this).parent().find('embed')[0])" role="button">Re-charger le projet</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint1ex5Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 1
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint1ex5Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>Très ressemblant à l'exercice précédent, sauf qu'il ne faut plus que le lutin suivent quand espace est pressé, mais en permanence.<br>Aide toi des blocs additionnels données, ils te seront utile, réfléchis bien à la structure que tu souhaite</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" data-toggle="collapse" data-target="#hint2ex5Collapsable">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button">
+                                        Indice 2
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="hint2ex5Collapsable" class="collapse">
+                                <div class="card-body">
+                                    <p>La structure qu'on souhaite est :</p>
+
+                                    <p>1. A partir du moment où le jeu commence...<br>2. Pour toujours...<br>2.1. S'orienter vers la souris<br>2.2. Avancer de 8<br>(Retour en 2.1)</p>
+
+                                    <p>A toi de trouver les bons blocs maintenant ;)</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="hideIfNotAdmin">
+
+
+                            <div class="card">
+                                <div class="card-header" data-toggle="collapse" data-target="#SolutionCollapsable">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button">
+                                            Solution
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="SolutionCollapsable" class="collapse">
+                                    <div class="card-body">
+
+                                        <pre class="blocks"><div class="scratchblocks"><svg version="1.1" width="218" height="120"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood><feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite><feMerge result="merge-10"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-5"></feMergeNode><feMergeNode in="comp-9"></feMergeNode></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite><feMerge result="merge-3"><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="comp-2"></feMergeNode></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"></path><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"></path><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"></path><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"></path><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"></path><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"></path><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"></path></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 126 10 L 129 13 L 129 35 L 126 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 18)">quand</text><use xlink:href="#greenFlag" transform="translate(45 12)"></use><text x="0" y="10" class="sb-label " transform="translate(69 18)">est</text><text x="0" y="10" class="sb-label " transform="translate(90 18)">cliqué</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 125 0 L 128 3 L 128 19 L 125 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 64 L 17 66 L 125 66 L 128 69 L 128 79 L 125 82 L 3 82 L 0 79" class="sb-control sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">répéter</text><text x="0" y="10" class="sb-label " transform="translate(51 5)">indéfiniment</text><use xlink:href="#loopArrow" transform="translate(113 79)"></use><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 196 0 L 199 3 L 199 19 L 196 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">s'orienter</text><text x="0" y="10" class="sb-label " transform="translate(64 5)">vers</text><g transform="translate(92 4)"><g width="101" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="101" height="14" class="sb-motion sb-darker"></rect></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pointeur de souris</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(91 5)"></polygon></g></g><g transform="translate(0 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 90 0 L 93 3 L 93 19 L 90 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"></path><text x="0" y="10" class="sb-label " transform="translate(6 5)">avancer</text><text x="0" y="10" class="sb-label " transform="translate(54 5)">de</text><g transform="translate(72 4)"><path d="M 6.5 0 L 8.5 0 A 6.5 6.5 0 0 1 8.5 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"></path><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">8</text></g></g></g></g></g></g></svg></div></pre>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <nav aria-label="NextPreviousConcept">
+            <ul class="pagination justify-content-center">
+
+                <li class="page-item">
+                    <a class="page-link" href="/scratch/concept/Orientation" role="button" aria-pressed="true">« Orientation</a>
+                </li>
+
+
+
+                <li class="page-item">
+                    <a class="page-link" href="/scratch/concept/coordonnees" role="button" aria-pressed="true">Coordonnées »</a>
+                </li>
+
+            </ul>
+        </nav>
+
+
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+{% include scratch/endJS.html %}
+
+</body>
+</html>
