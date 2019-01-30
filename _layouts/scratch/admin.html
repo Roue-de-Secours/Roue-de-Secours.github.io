@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    {% include scratch/head.html %}
+</head>
+
+
+<body>
+{% include scratch/nav.html %}
+
+<main role="main" class="container">
+    <div class="starter-template">
+        <div class="text-muted">Dernière mise à jour : {{page.lastUpdate}} - Auteur : {{page.author}}</div>
+        <p>Cette page est destinée au membre de l'ASBL <i>Roue de Secours</i> afin de leur donner divers conseils et astuces afin de donner des cours sur Scratch à l'aide de ce site</p>
+        <p>
+            DISCLAIMER : La version de Scratch à été mise à jour depuis la réalisation de ce site web, du coup l'interface et le logiciel présent sur le site ne sont plus à jour.
+            Cepandant les concepts et défis restent globalement la même chose.
+        </p>
+
+        <h2>Orgnisation pour 5 jours</h2>
+        <p>
+            Je recommande pour 1 semaine de stage avec les jeunes l'organisation suivante:
+        </p>
+        <ol>
+            <li>
+                Lundi, mardi et mercredi : Apprentissage de concept (dans l'ordre du site).<br>
+                Généralement Après la première semaine les concepts de mouvements et de collisons seront vus.
+                Inviter les jeunes à <b>réfléchir</b> sur une idée de jeu à réaliser pendant la réalisation de l'exerice, mais <b>ne pas</b> l'implémenter (pour l'instant)
+            </li>
+            <li>
+                Jeudi : Réalisation des projets personnels.<br>
+                Restez vigilants que les jeunes ne se jettent pas sur leurs projets les 3 premiers jours, sinon ils risquent d'avoir beaucoup de mal à le réaliser.
+                Il y à tout un tas de projets proposés sur la page d'accueuil si le jeune n'a pas d'idée.
+                S'il ne se décide pas, le <a href="/scratch/project/pong">pong</a> est le plus simple et le <a href="/scratch/project/labyrinthe">labyrinthe</a> est le plus sympa à réaliser.
+            </li>
+
+            <li>
+                Vendredi : fin de projet personnels ou détente ou présentation de son projet au reste de la classe
+            </li>
+        </ol>
+        <p>Si le stage est plus long que 5 jours, on répète cette même formule avec des nouveaux concepts</p>
+
+        <p>Important de mélanger à la fois le fait d'apprendre des nouveaux concepts (au début) et ensuite la réalisation de projet (en fin)</p>
+
+        <h2>Structure du site</h2>
+        <p>Le site est divisé en plusieurs parties:</p>
+        <h3>Concepts</h3>
+        <p>
+            Chaque concept est une "fonctionnalité" spécifique propre à Scratch.<br>
+            L'idée est de faire apprendre aux jeunes concepts par concepts le fonctionnement de Scratch.<br>
+            Tout les concepts sont énumérés sut la page principale du site.<br>
+        </p>
+        <p>
+            Toutes les pages des concepts sont structurés de la même manière :
+        </p>
+
+        <ol>
+            <li>Une courte présentation du concept, avec son interêt et certains détails important à son utilisation</li>
+            <li>Les blocs que Scratch utilise pour ce concept suivi d'informations supplémentaire</li>
+            <li>Une série d'exemples qui utilise le concept. Ils servent notamment à l'élève à visualiser dans un contexte utile des cas d'application du concept</li>
+            <li>Une série de défis que l'élève doit accomplir pour prouver qu'il maitrise le concept</li>
+        </ol>
+
+        <h3>Projets Personnel</h3>
+        <p>
+            Cette partie consiste à laisser l'élève libre court à son imagination pour qu'il développe son propre projet à l'aide des concepts vus précédemment.<br>
+
+            Une première page sert de guide aux élèves pour réaliser à bien leurs projets.<br>
+
+            Des propositions de jeux sont données classé par difficulté décroissante.
+            Tous ne nécessite que l'utilisation des concepts de mouvements et de collisions.
+            Mais libre à l'élève d'ajouter d'autres concepts s'il à eut le temps de les voir.
+            Ils ne servent que de modèles si l'enfant n'a pas d'idées.
+            Les détails des projets proposés sont exprès très vague et généralement sans code afin de laisser plus de liberté et d'autonomie au jeune.
+        </p>
+
+        <h2>Apprendre les concepts</h2>
+        <p>
+            Lorsqu'un nouveau concept est présenté, il est généralement bien de commencer par l'introduire à l'ensemble du groupe via la présentations appropriées.<br>
+            Tu trouvera les présentations sur la page <a href="/scratch/slide">slide</a>, tu peux aussi les trouver et télécharger sur mon <a href="https://1drv.ms/f/s!AjahKjA3JyBcnv5K1dSl9FxT0d9Fsw">drive personnel</a>.<br>
+            Les défis sur le site et des slides sont généralement les mêmes, des animations permettent de révéler la correction au click.<br>
+        </p>
+        <h2>Mode "administrateur"</h2>
+        <p>
+            Certaines fonctionnélitées ne sont accessible qu'au membre de l'ASBL, tel que les corrections des défis, la possibilitée d'afficher les blocs des projets/défis.<br>
+            Pour cela il suffit que le texte "corr" soit dans l'URL, par exemple pour la correction des défis de <a href="/scratch/concept/orientation">/scratch/concept/orientation</a> tu peux ajouter "#corr" à la fin de l'URL: <a href="/scratch/concept/orientation#corr">/scratch/concept/orientation#corr</a>.
+            Un texte en début s'affichera que tu es bien reconnu comme administrateur.
+        </p>
+
+
+        <h2>Site en local</h2>
+        <p>
+            Le site de Scratch qui est présent sur ce site n'est <b>PAS</b> la version originale du site que j'ai dévellopé.
+            C'est en quelque sorte une copie statique que j'ai ajouté.
+            La raison étant que l'hébergeur du site n'était pas compatible avec la façon dont j'ai programmé le site original.
+        </p>
+        <p>
+            Le site original est prévu pour marcher en local (en LAN),
+            l'idée étant de connecter son ordinateur au réseau local (cable éthernet/wifi sur place) et le site sera accessible et pleinement fonctionnel même sans connexion internet.
+        </p>
+
+        <p>
+            Lien vers le repo du projet : <a href="https://github.com/loan181/site_stage">LIEN</a>, les informations de fonctionnement et installations sont présent dedans.
+        </p>
+    </div>
+</main>
+
+{% include scratch/footer.html %}
+
+</body>
+
+</html>
